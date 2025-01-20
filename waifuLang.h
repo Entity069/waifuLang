@@ -395,7 +395,11 @@ void execute_program(Instruction* instructions, size_t instruction_count, Progra
             case STDIN:
                 // Due to getchar(), only a single character can be read at a time.
                 // TODO: Implement a better way to read input
-                *state->pointer = getchar();
+                int ch;
+                while ((ch = getchar()) == '\n' || ch == EOF) {
+                    // Skip newlines and EOF
+                }
+                *state->pointer = ch;
                 break;
             case STDOUT:
                 putchar(*state->pointer);
