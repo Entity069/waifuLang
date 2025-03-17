@@ -49,10 +49,11 @@ To install and run waifuLang locally first clone the repository:
 ```bash
 git clone https://github.com/Entity069/waifuLang.git
 ```
+
 Compile the source:
 
 ```bash
-gcc -Wall waifuLang.c -o waifuLang
+gcc -Wall main.c -o waifuLang
 ```
 
 Now you can use the `waifuLang` binary to run any compatible waifuLang program.
